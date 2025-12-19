@@ -1,14 +1,16 @@
 # 🍳 Our Cookbook
 
-A collaborative digital cookbook where friends and family can share their favorite recipes. Built with Cursor AI, hosted free on GitHub Pages.
+A collaborative digital cookbook by the Retail Brand Team. Built with Cursor AI, hosted free on GitHub Pages.
 
 **🌐 Live Site:** [brianokarski-shopify.github.io/our-cookbook](https://brianokarski-shopify.github.io/our-cookbook/)
 
 ---
 
-## 👋 Welcome, Team!
+## 👋 Welcome, Retail Brand Team!
 
-**You don't need to know how to code.** Just talk to Cursor AI and it will do everything for you — add recipes, change the design, fix problems, whatever you need!
+**You don't need to know how to code.** Just talk to Cursor AI and it will do everything for you — add recipes, completely redesign the site, fix problems, whatever you want!
+
+This is your playground. Go wild. ✨
 
 ---
 
@@ -37,121 +39,110 @@ The first time you push changes, Cursor will pop up asking you to sign into GitH
 
 ## 🚀 How to Add a Recipe
 
-### Just Tell Cursor What You Want!
+Open the Cursor chat (`Cmd + L`) and just say what you want:
 
-Open the Cursor chat (click the chat icon or press `Cmd + L`) and say something like:
+> **"Add a recipe for grandma's lasagna"**
 
-> **"Add a new recipe for grandma's lasagna to the cookbook"**
+Cursor will create the recipe page AND add it to the homepage. Done!
 
-Cursor will:
-- ✅ Create a new recipe page with all the details
-- ✅ Add a card to the homepage
-- ✅ Format everything to match our style
+### More Examples:
 
-### More Example Prompts:
+- *"Add my famous spicy chicken tacos recipe with a 30 min cook time"*
+- *"Add a recipe for chocolate lava cake — make it sound fancy and indulgent"*
+- *"Add Brian's lemon garlic pasta but with shrimp this time"*
 
-| What you want | What to say to Cursor |
-|---------------|----------------------|
-| Add a recipe | *"Add a recipe for spicy chicken tacos with a 30 min cook time"* |
-| Add details | *"The tacos recipe should include cilantro lime crema as a topping"* |
-| Add your name | *"Make sure it says the recipe is by Tasha"* |
-| Be specific | *"Add my mom's banana bread recipe: 3 bananas, 1 cup sugar, 1/3 cup melted butter, 1 egg, 1 tsp vanilla, 1 tsp baking soda, pinch of salt, 1.5 cups flour. Bake at 350 for 60 mins"* |
+---
 
-### After Cursor Makes Changes:
+## 🎨 Go Ahead — Redesign Everything!
 
-1. **Review the changes** — Cursor will show you what it created
-2. **Click "Accept"** on the changes you like
-3. **Push to GitHub:**
-   - Click the **Source Control** icon (🌿 branch icon in left sidebar)
-   - Type a message like: `Add grandma's lasagna`
-   - Click **✓ Commit**
-   - Click **Sync Changes** (↑↓ arrows)
+**This is the fun part.** We're the Retail Brand Team — we know good design when we see it. If you find a website you love, just tell Cursor to copy that vibe!
 
-Your recipe will be live on the site in about 1 minute!
+### Try These:
+
+> **"Redesign this cookbook to look like Malaproject.com"**
+
+> **"Make this site look like a high-end restaurant menu — think Eleven Madison Park"**
+
+> **"Give the site an Apple.com aesthetic — clean, minimal, lots of whitespace"**
+
+> **"Make it look like a vintage 1970s cookbook with retro typography"**
+
+> **"Redesign everything with a Japanese minimalist aesthetic like Muji"**
+
+### More Design Ideas:
+
+| Vibe | What to Say |
+|------|-------------|
+| Editorial | *"Make it look like Bon Appétit magazine's website"* |
+| Luxury | *"Give it an Aesop.com aesthetic"* |
+| Playful | *"Make it colorful and fun like a Glossier site"* |
+| Dark & Moody | *"Dark mode with rich photography like a wine bar menu"* |
+| Handcrafted | *"Make it feel like a hand-illustrated zine"* |
+| Brutalist | *"Redesign with a raw, brutalist web design style"* |
+
+**Don't hold back!** Share a link, describe a feeling, reference a brand — Cursor will figure it out.
 
 ---
 
 ## 📸 Adding Photos
 
-### Let Cursor Handle It!
-
-If you have a photo of your dish, just say:
+Drag your photo into the `images` folder, then tell Cursor:
 
 > **"Add my photo taco-night.jpg to the tacos recipe"**
 
-First, drag your photo into the `images` folder in Cursor's file explorer, then ask Cursor to link it up!
-
-### Or Do It Yourself:
-
-1. Drag your photo into the `images` folder
-2. Tell Cursor: *"Use the image images/my-photo.jpg for the lasagna recipe"*
+That's it!
 
 ---
 
-## 🎨 Changing the Design
+## ✏️ Editing & Tweaking
 
-### Yes, You Can Redesign the Whole Site!
+Want to change something? Just say it:
 
-Want to change how the cookbook looks? Just ask! Here are some ideas:
+- *"Make the homepage cards bigger"*
+- *"Change the font to something more elegant"*
+- *"Add a dark mode toggle"*
+- *"The header should be sticky when you scroll"*
+- *"Add animations when the recipe cards load"*
 
-| What you want | What to say |
-|---------------|-------------|
-| New colors | *"Change the color scheme to blue and gold"* |
-| Different font | *"Use a more playful, handwritten-style font"* |
-| Dark mode | *"Make the site dark mode with a cozy nighttime feel"* |
-| Bigger recipe cards | *"Make the recipe cards on the homepage larger with bigger photos"* |
-| Complete redesign | *"Redesign the whole site with a rustic farmhouse aesthetic"* |
-| Holiday theme | *"Add a festive holiday theme with snowflakes"* |
+---
 
-### ⚠️ Design Etiquette
+## 💾 Saving Your Changes
 
-Before making big design changes, **check with the team** in our group chat! We want everyone to love how the cookbook looks.
+After Cursor makes changes:
 
-Small changes to your own recipe pages are totally fine anytime.
+1. **Review** — make sure you like what it created
+2. **Accept** — click the checkmark on changes you want to keep
+3. **Push to GitHub:**
+   - Click **Source Control** (🌿 branch icon, left sidebar)
+   - Type a message like `Add grandma's lasagna` or `Redesign with Malaproject vibe`
+   - Click **✓ Commit**
+   - Click **Sync Changes**
+
+Your changes go live in about 1 minute!
+
+---
+
+## 🔄 Before You Start
+
+Always grab the latest version first:
+
+1. Click **Source Control** (🌿)
+2. Click **...** menu → **Pull**
+
+Or just say: *"Pull the latest changes from GitHub"*
 
 ---
 
 ## 🛠️ Fixing Problems
 
-### Something Look Wrong?
+Something look weird? Just describe it:
 
-Just describe the problem to Cursor:
+- *"The layout is broken on mobile"*
+- *"My image isn't showing up"*
+- *"The colors look wrong"*
+- *"Can you undo what I just did?"*
 
-- *"The image on my recipe isn't showing up"*
-- *"The text is too small on mobile"*
-- *"My recipe card isn't linking to the right page"*
-- *"The layout looks broken on the homepage"*
-
-Cursor will find and fix the issue!
-
----
-
-## ✏️ Editing Existing Recipes
-
-Want to update a recipe you already added?
-
-> *"Add a chef's note to the lasagna recipe about using fresh pasta"*
-
-> *"Change the cook time on my cookies recipe to 14 minutes"*
-
-> *"Add walnuts as an optional ingredient to the banana bread"*
-
----
-
-## 🔄 Staying in Sync
-
-### Before You Start Working:
-
-Always pull the latest changes so you have everyone's recipes:
-
-1. Click **Source Control** (🌿) in the left sidebar
-2. Click the **...** menu → **Pull**
-
-Or tell Cursor: *"Pull the latest changes from GitHub"*
-
-### If You Get a Conflict:
-
-Just tell Cursor: *"I have a git conflict, can you help me resolve it?"*
+Cursor will fix it!
 
 ---
 
@@ -159,44 +150,38 @@ Just tell Cursor: *"I have a git conflict, can you help me resolve it?"*
 
 ```
 our-cookbook/
-├── index.html              ← Homepage (recipe grid)
-├── styles.css              ← Site design (colors, fonts, layout)
+├── index.html              ← Homepage
+├── styles.css              ← All the design stuff
 ├── recipe-template.html    ← Template for new recipes
-├── images/                 ← Recipe photos go here
-├── [recipe-name].html      ← Individual recipe pages
-└── README.md               ← This file!
+├── images/                 ← Recipe photos
+├── [recipe-name].html      ← Individual recipes
+└── README.md               ← You're here!
 ```
 
 ---
 
-## 💡 Pro Tips
+## 💡 Tips
 
-1. **Be specific** — The more detail you give Cursor, the better the result
-2. **Review changes** — Always look at what Cursor creates before accepting
-3. **Commit often** — Push your changes so others can see them
-4. **Pull before you start** — Get everyone's latest recipes first
-5. **Ask for help** — If something's confusing, just ask Cursor to explain!
-
----
-
-## 🆘 Common Questions
-
-**"Cursor isn't responding"**
-→ Make sure you're in the chat panel (Cmd + L) not just the editor
-
-**"I can't push my changes"**
-→ Make sure you committed first (Source Control → Commit), then Sync Changes
-
-**"The site isn't updating"**
-→ GitHub Pages can take 1-2 minutes to update. Refresh and wait!
-
-**"I messed something up"**
-→ Tell Cursor: *"Undo the last changes I made to index.html"*
-→ Or ask: *"Can you restore the recipe template to its original state?"*
+- **Be bold** — Big redesigns are encouraged!
+- **Reference real sites** — "Make it look like X" works great
+- **Describe feelings** — "Make it feel cozy" or "more premium"
+- **Iterate** — Say "I like it but make the text bigger" to refine
+- **Commit often** — Push your changes so others can see them
 
 ---
 
-## 👨‍👩‍👧‍👦 Our Team
+## 🆘 Quick Fixes
+
+| Problem | Solution |
+|---------|----------|
+| Can't push | Did you commit first? Source Control → Commit → then Sync |
+| Site not updating | Wait 1-2 min for GitHub Pages to refresh |
+| Made a mistake | Tell Cursor: *"Undo the last changes"* |
+| Confused | Just ask Cursor: *"What did you change?"* |
+
+---
+
+## 👨‍👩‍👧‍👦 Retail Brand Team
 
 - **Brian** — Lemon Garlic Pasta
 - **Tasha** — *Add your recipe!*
@@ -207,6 +192,6 @@ our-cookbook/
 
 ---
 
-Made with ❤️ by our cooking crew
+Made with ❤️ by the Retail Brand Team
 
 *Last updated: December 2024*
