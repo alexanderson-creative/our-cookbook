@@ -18,7 +18,7 @@ This is your playground. Go wild. ✨
 
 ### Step 1: Download Cursor
 
-If you don't have it yet, download Cursor at [cursor.com](https://cursor.com) — it's free!
+If you don't have it yet, download Cursor at [cursor.com](https://cursor.com) or search for it in Okta. Login with your Shopify email.
 
 ### Step 2: Clone the Cookbook
 
