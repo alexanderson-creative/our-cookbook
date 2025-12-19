@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- STEP 1: Change the title below to your recipe name -->
   <title>Your Recipe Name | Our Cookbook</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -11,7 +10,7 @@
 
   <!-- Top Banner -->
   <div class="top-banner">
-    Site inspired by <a href="https://potluckmarket.com" target="_blank">potluckmarket.com</a> — ask Cursor to redesign this like your favorite food site 👀
+    Site inspired by <a href="https://potluckmarket.com">potluckmarket.com</a> — Ask Cursor to redesign this like your favorite food site 👀
   </div>
 
   <!-- Navigation -->
@@ -20,45 +19,36 @@
       <a href="index.html" class="nav-logo">Our Cookbook</a>
       <ul class="nav-links">
         <li><a href="index.html">Recipes</a></li>
-        <li><a href="index.html#contribute">About</a></li>
+        <li><a href="index.html#contribute">Add Yours</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- Recipe Header -->
+  <header class="recipe-header">
+    <h1>Your Recipe Name</h1>
+    <p class="author">A recipe by <strong>Your Name</strong></p>
+    
+    <div class="recipe-meta">
+      <div class="meta-item">
+        <span class="label">Prep</span>
+        <span class="value">XX min</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Cook</span>
+        <span class="value">XX min</span>
+      </div>
+      <div class="meta-item">
+        <span class="label">Serves</span>
+        <span class="value">X</span>
+      </div>
+    </div>
+  </header>
+
   <!-- Main Content -->
   <main class="container">
 
-    <!-- Recipe Header -->
-    <!-- STEP 2: Fill in your recipe title and your name -->
-    <header class="recipe-header">
-      <h1>Your Recipe Name</h1>
-      <p class="author">A recipe by <strong>Your Name</strong></p>
-      
-      <div class="recipe-meta">
-        <div class="meta-item">
-          <span class="label">Prep</span>
-          <span class="value">XX min</span>
-        </div>
-        <div class="meta-item">
-          <span class="label">Cook</span>
-          <span class="value">XX min</span>
-        </div>
-        <div class="meta-item">
-          <span class="label">Serves</span>
-          <span class="value">X</span>
-        </div>
-      </div>
-    </header>
-
-    <!-- Optional: Recipe Image -->
-    <!--
-    <div class="recipe-image-container">
-      <img src="images/your-image.jpg" alt="Your Recipe Name" class="recipe-image">
-    </div>
-    -->
-
     <!-- Ingredients -->
-    <!-- STEP 3: List your ingredients -->
     <section class="recipe-section">
       <h2>Ingredients</h2>
       <ul class="ingredients-list">
@@ -70,22 +60,20 @@
     </section>
 
     <!-- Instructions -->
-    <!-- STEP 4: Write your cooking instructions -->
     <section class="recipe-section">
       <h2>Instructions</h2>
       <ol class="instructions-list">
-        <li>First, do this thing. Be specific about temperatures, times, and techniques.</li>
-        <li>Next, do this other thing. Describe what it should look like when done.</li>
-        <li>Then, continue with this step. Add helpful tips if you have them.</li>
-        <li>Finally, finish with this. Describe the end result.</li>
+        <li>First step. Be specific about temps and times.</li>
+        <li>Second step. Describe what it should look like.</li>
+        <li>Third step. Add tips if you have them.</li>
+        <li>Final step. Describe the end result.</li>
       </ol>
     </section>
 
-    <!-- Notes (Optional) -->
-    <!-- STEP 5: Add any helpful notes -->
+    <!-- Notes -->
     <div class="recipe-notes">
       <h3>Notes</h3>
-      <p>Add any tips, variations, or personal notes here. Delete this section if you don't need it.</p>
+      <p>Add tips, variations, or personal notes here.</p>
     </div>
 
   </main>
@@ -93,7 +81,7 @@
   <!-- Footer -->
   <footer class="footer">
     <p><a href="index.html">← Back to Recipes</a></p>
-    <p>Made with care by the Retail Brand Team</p>
+    <p>Made by the Retail Brand Team</p>
   </footer>
 
 </body>

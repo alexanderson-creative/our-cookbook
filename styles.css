@@ -1,35 +1,35 @@
 /* ═══════════════════════════════════════════════════════════════
-   🍳 Our Cookbook - Potluck Market Exact Style
-   Clean, minimal DTC aesthetic
+   🍳 Our Cookbook - Potluck Market Style
+   Flat, oversized type, vibrant Collins-style palette, D2C energy
    ═══════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  /* Potluck exact colors */
-  --color-bg: #FFFDF8;
-  --color-white: #FFFFFF;
-  --color-black: #1A1A1A;
-  --color-text: #1A1A1A;
-  --color-text-light: #666666;
-  --color-border: #E8E8E8;
-  --color-accent: #C84B31;
-  --color-cream: #F5F0E8;
+  /* Vibrant, off-kilter Collins-style palette */
+  --orange: #FF5C00;
+  --cream: #FFF8F0;
+  --blue: #0038FF;
+  --green: #00A676;
+  --pink: #FF8FA4;
+  --yellow: #FFE566;
+  --black: #0A0A0A;
+  --white: #FFFFFF;
+  --gray: #6B6B6B;
   
   /* Typography */
-  --font-serif: 'EB Garamond', Georgia, serif;
-  --font-sans: 'Karla', -apple-system, sans-serif;
+  --font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   
   /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
-  --space-lg: 2.5rem;
-  --space-xl: 4rem;
-  --space-xxl: 6rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 5rem;
   
   /* Layout */
-  --max-width: 1200px;
+  --max-width: 1400px;
 }
 
 *, *::before, *::after {
@@ -40,16 +40,15 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-sans);
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--color-text);
-  background: var(--color-bg);
-  min-height: 100vh;
+  font-family: var(--font);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--black);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -58,34 +57,33 @@ a {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Top Banner - exactly like Potluck
+   Top Banner
    ═══════════════════════════════════════════════════════════════ */
 
 .top-banner {
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--orange);
+  color: var(--white);
   text-align: center;
-  padding: 0.65rem var(--space-md);
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  padding: 0.75rem var(--space-md);
+  font-size: 0.875rem;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .top-banner a {
-  color: var(--color-white);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Navigation - Clean & Minimal
+   Navigation - Flat, Bold
    ═══════════════════════════════════════════════════════════════ */
 
 .nav {
-  background: var(--color-bg);
+  background: var(--cream);
   padding: var(--space-md) var(--space-lg);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 3px solid var(--black);
 }
 
 .nav-content {
@@ -97,12 +95,11 @@ a {
 }
 
 .nav-logo {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-weight: 400;
-  color: var(--color-text);
-  text-decoration: none;
-  letter-spacing: 0.02em;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--black);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
 .nav-links {
@@ -112,17 +109,47 @@ a {
 }
 
 .nav-links a {
-  color: var(--color-text);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  transition: opacity 0.2s ease;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  transition: all 0.15s ease;
 }
 
 .nav-links a:hover {
-  opacity: 0.6;
+  border-color: var(--black);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Hero - Big, Raw, Bold
+   ═══════════════════════════════════════════════════════════════ */
+
+.hero {
+  background: var(--green);
+  padding: var(--space-xxl) var(--space-lg);
+  text-align: center;
+  border-bottom: 3px solid var(--black);
+}
+
+.hero h1 {
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 900;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 0.85;
+  margin-bottom: var(--space-md);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cream);
+  max-width: 500px;
+  margin: 0 auto;
+  opacity: 0.9;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -132,48 +159,18 @@ a {
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--space-xl) var(--space-lg);
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   Hero Section - Big Serif Title
-   ═══════════════════════════════════════════════════════════════ */
-
-.hero {
-  text-align: center;
   padding: var(--space-xxl) var(--space-lg);
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 400;
-  color: var(--color-text);
-  margin-bottom: var(--space-md);
-  line-height: 1.15;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: var(--color-text-light);
-  font-weight: 400;
-  max-width: 500px;
-  margin: 0 auto;
-  line-height: 1.7;
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Section Title
+   Section Title - Oversized
    ═══════════════════════════════════════════════════════════════ */
 
 .section-title {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 400;
-  color: var(--color-text);
-  text-align: center;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-xl);
 }
 
@@ -183,57 +180,61 @@ a {
 
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: var(--space-lg);
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Recipe Card - Potluck Style
+   Recipe Card - Flat, Bold, D2C
    ═══════════════════════════════════════════════════════════════ */
 
 .recipe-card {
-  background: var(--color-white);
+  background: var(--white);
+  border: 3px solid var(--black);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   display: block;
-  transition: opacity 0.2s ease;
+  transition: transform 0.15s ease;
 }
 
 .recipe-card:hover {
-  opacity: 0.85;
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0 var(--black);
 }
 
 .recipe-card-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  background: var(--color-cream);
+  background: var(--yellow);
+  border-bottom: 3px solid var(--black);
 }
 
 .recipe-card-image.placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .recipe-card-content {
-  padding: var(--space-md) 0;
+  padding: var(--space-md);
 }
 
 .recipe-card h3 {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
   margin-bottom: var(--space-xs);
-  color: var(--color-text);
 }
 
 .recipe-card p {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray);
+  line-height: 1.4;
 }
 
 .recipe-card-meta {
@@ -241,74 +242,73 @@ a {
   gap: var(--space-md);
   margin-top: var(--space-sm);
   font-size: 0.8rem;
-  color: var(--color-text-light);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
+  color: var(--orange);
 }
 
-/* Hide category badge in this style */
+/* Category badge hidden */
 .category-badge {
   display: none;
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Quote/Testimonial Section
+   Quote Section - Vibrant Block
    ═══════════════════════════════════════════════════════════════ */
 
 .quote-section {
-  background: var(--color-cream);
+  background: var(--blue);
   padding: var(--space-xxl) var(--space-lg);
-  margin: var(--space-xxl) 0;
   text-align: center;
+  border-top: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
 }
 
 .quote-section blockquote {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-style: italic;
-  color: var(--color-text);
-  max-width: 700px;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white);
+  max-width: 900px;
   margin: 0 auto var(--space-md);
-  line-height: 1.6;
-}
-
-.quote-section cite {
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-style: normal;
-  color: var(--color-text-light);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   Recipe Page Styles
-   ═══════════════════════════════════════════════════════════════ */
-
-.recipe-header {
-  text-align: center;
-  padding: var(--space-xl) 0;
-  border-bottom: 1px solid var(--color-border);
-  margin-bottom: var(--space-xl);
-}
-
-.recipe-header h1 {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 400;
-  color: var(--color-text);
-  margin-bottom: var(--space-sm);
   line-height: 1.2;
 }
 
+.quote-section cite {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cream);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Recipe Page
+   ═══════════════════════════════════════════════════════════════ */
+
+.recipe-header {
+  background: var(--pink);
+  padding: var(--space-xxl) var(--space-lg);
+  text-align: center;
+  border-bottom: 3px solid var(--black);
+}
+
+.recipe-header h1 {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  margin-bottom: var(--space-md);
+}
+
 .recipe-header .author {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .recipe-header .author strong {
-  color: var(--color-text);
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .recipe-meta {
@@ -316,62 +316,71 @@ a {
   justify-content: center;
   gap: var(--space-xl);
   margin-top: var(--space-lg);
+  flex-wrap: wrap;
 }
 
 .meta-item {
   text-align: center;
+  background: var(--white);
+  border: 3px solid var(--black);
+  padding: var(--space-sm) var(--space-md);
 }
 
 .meta-item .label {
   font-size: 0.7rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-text-light);
+  letter-spacing: 0.1em;
+  color: var(--gray);
   display: block;
   margin-bottom: 0.25rem;
 }
 
 .meta-item .value {
-  font-family: var(--font-serif);
   font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--color-text);
+  font-weight: 800;
 }
 
 /* Recipe Image */
 .recipe-image-container {
   margin: var(--space-xl) 0;
+  border: 3px solid var(--black);
 }
 
 .recipe-image {
   width: 100%;
-  max-height: 500px;
-  object-fit: cover;
+  display: block;
 }
 
 /* Recipe Sections */
 .recipe-section {
   margin-bottom: var(--space-xl);
-  max-width: 640px;
+  max-width: 700px;
 }
 
 .recipe-section h2 {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: var(--color-text);
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
   margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 3px solid var(--black);
 }
 
 /* Ingredients */
 .ingredients-list {
   list-style: none;
+  background: var(--yellow);
+  border: 3px solid var(--black);
+  padding: var(--space-md);
 }
 
 .ingredients-list li {
   padding: var(--space-sm) 0;
-  border-bottom: 1px solid var(--color-border);
-  font-size: 1rem;
+  border-bottom: 2px dashed var(--black);
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .ingredients-list li:last-child {
@@ -386,48 +395,50 @@ a {
 
 .instructions-list li {
   counter-increment: step;
-  padding: var(--space-md) 0;
-  padding-left: 3.5rem;
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  background: var(--white);
+  border: 3px solid var(--black);
   position: relative;
-  border-bottom: 1px solid var(--color-border);
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.instructions-list li:last-child {
-  border-bottom: none;
+  padding-left: 5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .instructions-list li::before {
   content: counter(step);
   position: absolute;
-  left: 0;
-  top: var(--space-md);
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  color: var(--color-text-light);
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--orange);
 }
 
-/* Notes Section */
+/* Notes */
 .recipe-notes {
-  background: var(--color-cream);
+  background: var(--green);
+  border: 3px solid var(--black);
   padding: var(--space-lg);
   margin-top: var(--space-xl);
-  max-width: 640px;
+  max-width: 700px;
 }
 
 .recipe-notes h3 {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 400;
-  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--cream);
   margin-bottom: var(--space-sm);
 }
 
 .recipe-notes p {
-  color: var(--color-text-light);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  color: var(--cream);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -435,88 +446,89 @@ a {
    ═══════════════════════════════════════════════════════════════ */
 
 #contribute {
-  text-align: center;
+  background: var(--cream);
   padding: var(--space-xxl) var(--space-lg);
-  background: var(--color-white);
-  margin-top: var(--space-xxl);
-  border-top: 1px solid var(--color-border);
+  text-align: center;
+  border-top: 3px solid var(--black);
 }
 
 #contribute h2 {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
   margin-bottom: var(--space-sm);
-  color: var(--color-text);
 }
 
 #contribute > p {
-  color: var(--color-text-light);
-  max-width: 450px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gray);
+  max-width: 500px;
   margin: 0 auto var(--space-md);
-  font-size: 1rem;
-  line-height: 1.6;
 }
 
 .example-prompt {
-  background: var(--color-bg);
+  background: var(--white);
+  border: 3px solid var(--black);
   padding: var(--space-md) var(--space-lg);
   margin: var(--space-lg) auto;
-  max-width: 480px;
-  border-left: 2px solid var(--color-text);
+  max-width: 550px;
+  transform: rotate(-1deg);
 }
 
 .example-prompt p {
-  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
   font-style: italic;
-  font-size: 1.1rem;
-  color: var(--color-text);
   margin: 0;
 }
 
 #contribute a.button {
   display: inline-block;
-  background: var(--color-black);
-  color: var(--color-white);
-  padding: 0.9rem 2rem;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  background: var(--orange);
+  color: var(--white);
+  padding: 1rem 2.5rem;
+  font-weight: 800;
+  font-size: 1rem;
   text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: 3px solid var(--black);
   margin-top: var(--space-md);
-  transition: opacity 0.2s ease;
+  transition: all 0.15s ease;
 }
 
 #contribute a.button:hover {
-  opacity: 0.8;
+  background: var(--black);
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 var(--orange);
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Footer - Minimal
+   Footer
    ═══════════════════════════════════════════════════════════════ */
 
 .footer {
+  background: var(--black);
+  color: var(--cream);
   text-align: center;
   padding: var(--space-xl) var(--space-lg);
-  border-top: 1px solid var(--color-border);
 }
 
 .footer p {
-  color: var(--color-text-light);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   margin-bottom: var(--space-xs);
 }
 
 .footer a {
-  color: var(--color-text);
+  color: var(--orange);
   text-decoration: underline;
   text-underline-offset: 2px;
-  transition: opacity 0.2s ease;
 }
 
 .footer a:hover {
-  opacity: 0.6;
+  color: var(--yellow);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -524,25 +536,13 @@ a {
    ═══════════════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
-  .nav {
-    padding: var(--space-sm) var(--space-md);
-  }
-  
   .nav-content {
     flex-direction: column;
     gap: var(--space-sm);
   }
   
   .nav-links {
-    gap: var(--space-md);
-  }
-  
-  .container {
-    padding: var(--space-lg) var(--space-md);
-  }
-  
-  .hero {
-    padding: var(--space-xl) var(--space-md);
+    gap: var(--space-sm);
   }
   
   .recipe-grid {
@@ -550,37 +550,24 @@ a {
   }
   
   .recipe-meta {
-    gap: var(--space-lg);
-    flex-wrap: wrap;
+    gap: var(--space-sm);
   }
   
   .instructions-list li {
-    padding-left: 2.5rem;
+    padding-left: 4rem;
   }
   
-  .quote-section {
-    padding: var(--space-xl) var(--space-md);
-  }
-  
-  .quote-section blockquote {
-    font-size: 1.25rem;
-  }
-  
-  #contribute {
-    padding: var(--space-xl) var(--space-md);
+  .instructions-list li::before {
+    font-size: 1.5rem;
   }
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Print Styles
+   Print
    ═══════════════════════════════════════════════════════════════ */
 
 @media print {
   .nav, .footer, .top-banner, #contribute, .quote-section {
     display: none;
-  }
-  
-  body {
-    background: white;
   }
 }
