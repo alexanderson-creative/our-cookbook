@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Cookbook 🍳</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar (same on every page) -->
+  <nav class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-logo">
+        🍳 Our Cookbook
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">All Recipes</a></li>
+        <li><a href="#contribute">How to Contribute</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Our Cookbook</h1>
+      <p class="subtitle">A collaborative collection of recipes from friends and family. Made with love, shared with joy.</p>
+    </header>
+
+    <!-- Recipe Grid -->
+    <section class="recipe-grid">
+
+      <!-- Recipe Card: Lemon Garlic Pasta -->
+      <a href="lemon-garlic-pasta.html" class="recipe-card">
+        <div class="recipe-card-image placeholder">🍝</div>
+        <div class="recipe-card-content">
+          <span class="category-badge">Pasta</span>
+          <h3>Lemon Garlic Pasta</h3>
+          <p>A bright, zesty weeknight dinner that comes together in 20 minutes.</p>
+          <div class="recipe-card-meta">
+            <span>⏱️ 20 min</span>
+            <span>👤 By Brian</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Recipe Card: Chocolate Chip Cookies -->
+      <a href="chocolate-chip-cookies.html" class="recipe-card">
+        <div class="recipe-card-image placeholder">🍪</div>
+        <div class="recipe-card-content">
+          <span class="category-badge">Dessert</span>
+          <h3>Classic Chocolate Chip Cookies</h3>
+          <p>Crispy edges, chewy centers—the perfect cookie every time.</p>
+          <div class="recipe-card-meta">
+            <span>⏱️ 35 min</span>
+            <span>👤 By Madison</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Recipe Card: Morning Smoothie Bowl -->
+      <a href="smoothie-bowl.html" class="recipe-card">
+        <div class="recipe-card-image placeholder">🥣</div>
+        <div class="recipe-card-content">
+          <span class="category-badge">Breakfast</span>
+          <h3>Berry Smoothie Bowl</h3>
+          <p>Start your day with this vibrant, nutrient-packed breakfast bowl.</p>
+          <div class="recipe-card-meta">
+            <span>⏱️ 10 min</span>
+            <span>👤 By Alex</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 
+        ═══════════════════════════════════════════════════════════
+        ADD YOUR RECIPE CARD HERE!
+        Copy the template below and fill in your details:
+        ═══════════════════════════════════════════════════════════
+        
+        <a href="your-recipe-name.html" class="recipe-card">
+          <div class="recipe-card-image placeholder">🍽️</div>
+          <div class="recipe-card-content">
+            <span class="category-badge">Category</span>
+            <h3>Your Recipe Title</h3>
+            <p>A short, enticing description of your dish.</p>
+            <div class="recipe-card-meta">
+              <span>⏱️ XX min</span>
+              <span>👤 By YourName</span>
+            </div>
+          </div>
+        </a>
+      -->
+
+    </section>
+
+    <!-- How to Contribute Section -->
+    <section id="contribute" style="margin-top: 4rem; padding: 2rem; background: var(--color-warm-white); border-radius: var(--border-radius); border: 1px solid var(--color-border);">
+      <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-charcoal);">📝 How to Add Your Recipe</h2>
+      <ol style="padding-left: 1.5rem; color: var(--color-warm-gray);">
+        <li style="margin-bottom: 0.75rem;"><strong>Copy the template:</strong> Download <code>recipe-template.html</code> from our GitHub repo</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Rename it:</strong> Use lowercase with hyphens (e.g., <code>grandmas-meatballs.html</code>)</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Fill it in:</strong> Replace the placeholder text with your recipe details</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Add a card:</strong> Add a recipe card to this page (index.html) following the comment template above</li>
+        <li style="margin-bottom: 0.75rem;"><strong>Upload to GitHub:</strong> Go to our repo → Add file → Upload files → Commit changes</li>
+      </ol>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-sage);">
+        💡 <strong>Tip:</strong> Check the README.md file for detailed instructions and naming conventions!
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with ❤️ by Brian, Tasha, Alex, Julia, Madison & Caroline</p>
+    <p><a href="https://github.com/YOUR-USERNAME/our-cookbook">View on GitHub</a></p>
+  </footer>
+
+</body>
+</html>
+
