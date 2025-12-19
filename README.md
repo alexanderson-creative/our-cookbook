@@ -112,11 +112,14 @@ After Cursor makes changes:
 
 1. **Review** — make sure you like what it created
 2. **Accept** — click the checkmark on changes you want to keep
-3. **Push to GitHub:**
-   - Click **Source Control** (🌿 branch icon, left sidebar)
-   - Type a message like `Add grandma's lasagna` or `Redesign with Malaproject vibe`
-   - Click **✓ Commit**
-   - Click **Sync Changes**
+3. **Push to GitHub** — just tell Cursor:
+
+> **"Commit and push my changes"**
+
+Or open the terminal (`Ctrl + ~`) and run:
+```bash
+git add . && git commit -m "Your message here" && git push
+```
 
 Your changes go live in about 1 minute!
 
@@ -124,12 +127,14 @@ Your changes go live in about 1 minute!
 
 ## 🔄 Before You Start
 
-Always grab the latest version first:
+Always grab the latest version first. Just tell Cursor:
 
-1. Click **Source Control** (🌿)
-2. Click **...** menu → **Pull**
+> **"Pull the latest changes from GitHub"**
 
-Or just say: *"Pull the latest changes from GitHub"*
+Or open the terminal (`Ctrl + ~`) and run:
+```bash
+git pull
+```
 
 ---
 
@@ -174,7 +179,7 @@ our-cookbook/
 
 | Problem | Solution |
 |---------|----------|
-| Can't push | Did you commit first? Source Control → Commit → then Sync |
+| Can't push | Tell Cursor: *"Commit and push my changes"* |
 | Site not updating | Wait 1-2 min for GitHub Pages to refresh |
 | Made a mistake | Tell Cursor: *"Undo the last changes"* |
 | Confused | Just ask Cursor: *"What did you change?"* |
