@@ -1,28 +1,24 @@
 /* ═══════════════════════════════════════════════════════════════
-   🍳 Our Cookbook - Potluck Market Inspired Design
-   Warm, playful, community-driven aesthetic
+   🍳 Our Cookbook - Potluck Market Exact Style
+   Clean, minimal DTC aesthetic
    ═══════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Potluck-inspired warm, earthy palette */
-  --color-cream: #FDF6E9;
-  --color-cream-dark: #F5EBD9;
-  --color-orange: #E86A33;
-  --color-orange-light: #FFEEE5;
-  --color-green: #2D5A3D;
-  --color-green-light: #E8F0E5;
-  --color-brown: #3D2C1E;
-  --color-brown-light: #6B5344;
-  --color-yellow: #F7C948;
-  --color-yellow-light: #FFF8E1;
-  --color-red: #C73E3A;
+  /* Potluck exact colors */
+  --color-bg: #FFFDF8;
   --color-white: #FFFFFF;
+  --color-black: #1A1A1A;
+  --color-text: #1A1A1A;
+  --color-text-light: #666666;
+  --color-border: #E8E8E8;
+  --color-accent: #C84B31;
+  --color-cream: #F5F0E8;
   
   /* Typography */
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-serif: 'EB Garamond', Georgia, serif;
+  --font-sans: 'Karla', -apple-system, sans-serif;
   
   /* Spacing */
   --space-xs: 0.5rem;
@@ -33,9 +29,7 @@
   --space-xxl: 6rem;
   
   /* Layout */
-  --max-width: 1100px;
-  --radius: 16px;
-  --radius-lg: 24px;
+  --max-width: 1200px;
 }
 
 *, *::before, *::after {
@@ -45,50 +39,53 @@
 }
 
 html {
-  font-size: 17px;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-sans);
   font-weight: 400;
   line-height: 1.6;
-  color: var(--color-brown);
-  background: var(--color-cream);
+  color: var(--color-text);
+  background: var(--color-bg);
   min-height: 100vh;
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   Inspiration Banner
-   ═══════════════════════════════════════════════════════════════ */
-
-.inspiration-banner {
-  background: var(--color-green);
-  color: var(--color-cream);
-  text-align: center;
-  padding: 0.6rem var(--space-md);
-  font-size: 0.85rem;
-  font-weight: 500;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.inspiration-banner a {
-  color: var(--color-yellow);
+/* ═══════════════════════════════════════════════════════════════
+   Top Banner - exactly like Potluck
+   ═══════════════════════════════════════════════════════════════ */
+
+.top-banner {
+  background: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  padding: 0.65rem var(--space-md);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.top-banner a {
+  color: var(--color-white);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.inspiration-banner a:hover {
-  color: var(--color-white);
-}
-
 /* ═══════════════════════════════════════════════════════════════
-   Navigation - Warm & Friendly
+   Navigation - Clean & Minimal
    ═══════════════════════════════════════════════════════════════ */
 
 .nav {
-  background: var(--color-cream);
+  background: var(--color-bg);
   padding: var(--space-md) var(--space-lg);
-  border-bottom: 2px solid var(--color-cream-dark);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .nav-content {
@@ -100,23 +97,12 @@ body {
 }
 
 .nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--color-green);
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-text);
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-logo::before {
-  content: "🥘";
-  font-size: 1.4rem;
-}
-
-.nav-logo:hover {
-  color: var(--color-orange);
+  letter-spacing: 0.02em;
 }
 
 .nav-links {
@@ -126,18 +112,17 @@ body {
 }
 
 .nav-links a {
-  color: var(--color-brown);
+  color: var(--color-text);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius);
-  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: opacity 0.2s ease;
 }
 
 .nav-links a:hover {
-  background: var(--color-orange-light);
-  color: var(--color-orange);
+  opacity: 0.6;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -151,66 +136,45 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Hero - Big, Warm, Welcoming
+   Hero Section - Big Serif Title
    ═══════════════════════════════════════════════════════════════ */
 
 .hero {
   text-align: center;
   padding: var(--space-xxl) var(--space-lg);
-  background: var(--color-orange);
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--space-xl);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "🍞 🥗 🍲 🥧 🍳";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 8rem;
-  opacity: 0.1;
-  white-space: nowrap;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  font-weight: 700;
-  color: var(--color-white);
-  margin-bottom: var(--space-sm);
-  position: relative;
-  z-index: 1;
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+  line-height: 1.15;
 }
 
-.hero .subtitle {
-  font-size: 1.15rem;
-  color: var(--color-cream);
-  font-weight: 500;
-  max-width: 400px;
+.hero p {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  font-weight: 400;
+  max-width: 500px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  line-height: 1.7;
 }
 
 /* ═══════════════════════════════════════════════════════════════
    Section Title
    ═══════════════════════════════════════════════════════════════ */
 
-.section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-lg);
-}
-
 .section-title {
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: var(--color-brown);
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-xl);
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -219,92 +183,102 @@ body {
 
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--space-lg);
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Recipe Card - Playful & Warm
+   Recipe Card - Potluck Style
    ═══════════════════════════════════════════════════════════════ */
 
 .recipe-card {
   background: var(--color-white);
-  border-radius: var(--radius-lg);
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   display: block;
-  box-shadow: 0 2px 8px rgba(61, 44, 30, 0.08);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
+  transition: opacity 0.2s ease;
 }
 
 .recipe-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(61, 44, 30, 0.15);
-  border-color: var(--color-orange);
+  opacity: 0.85;
 }
 
 .recipe-card-image {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  background: var(--color-yellow-light);
+  background: var(--color-cream);
 }
 
 .recipe-card-image.placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 5rem;
-  background: linear-gradient(135deg, var(--color-yellow-light) 0%, var(--color-orange-light) 100%);
+  font-size: 4rem;
 }
 
 .recipe-card-content {
-  padding: var(--space-md);
+  padding: var(--space-md) 0;
 }
 
 .recipe-card h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: 1.35rem;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: var(--space-xs);
-  color: var(--color-brown);
+  color: var(--color-text);
 }
 
 .recipe-card p {
-  color: var(--color-brown-light);
+  color: var(--color-text-light);
   font-size: 0.95rem;
   line-height: 1.5;
-  margin-bottom: var(--space-sm);
 }
 
 .recipe-card-meta {
   display: flex;
   gap: var(--space-md);
-  font-size: 0.85rem;
-  color: var(--color-brown-light);
-  font-weight: 500;
-}
-
-.recipe-card-meta span {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-/* Category Badge - Colorful pill */
-.category-badge {
-  display: inline-block;
-  background: var(--color-green-light);
-  color: var(--color-green);
-  padding: 0.35em 0.85em;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 700;
+  margin-top: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--color-text-light);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: var(--space-sm);
+}
+
+/* Hide category badge in this style */
+.category-badge {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Quote/Testimonial Section
+   ═══════════════════════════════════════════════════════════════ */
+
+.quote-section {
+  background: var(--color-cream);
+  padding: var(--space-xxl) var(--space-lg);
+  margin: var(--space-xxl) 0;
+  text-align: center;
+}
+
+.quote-section blockquote {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--color-text);
+  max-width: 700px;
+  margin: 0 auto var(--space-md);
+  line-height: 1.6;
+}
+
+.quote-section cite {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -313,33 +287,28 @@ body {
 
 .recipe-header {
   text-align: center;
-  padding: var(--space-xl) var(--space-lg);
-  background: var(--color-green);
-  border-radius: var(--radius-lg);
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-border);
   margin-bottom: var(--space-xl);
 }
 
-.recipe-header .category-badge {
-  background: rgba(255, 255, 255, 0.2);
-  color: var(--color-cream);
-}
-
 .recipe-header h1 {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  font-weight: 700;
-  color: var(--color-white);
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  color: var(--color-text);
   margin-bottom: var(--space-sm);
+  line-height: 1.2;
 }
 
 .recipe-header .author {
-  color: var(--color-cream);
-  font-size: 1rem;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
 }
 
 .recipe-header .author strong {
-  color: var(--color-yellow);
-  font-weight: 600;
+  color: var(--color-text);
+  font-weight: 500;
 }
 
 .recipe-meta {
@@ -347,38 +316,31 @@ body {
   justify-content: center;
   gap: var(--space-xl);
   margin-top: var(--space-lg);
-  flex-wrap: wrap;
 }
 
 .meta-item {
   text-align: center;
-  background: rgba(255, 255, 255, 0.15);
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius);
 }
 
 .meta-item .label {
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-cream);
+  letter-spacing: 0.12em;
+  color: var(--color-text-light);
   display: block;
   margin-bottom: 0.25rem;
-  opacity: 0.8;
 }
 
 .meta-item .value {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--color-white);
+  font-weight: 400;
+  color: var(--color-text);
 }
 
 /* Recipe Image */
 .recipe-image-container {
   margin: var(--space-xl) 0;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
 }
 
 .recipe-image {
@@ -387,71 +349,36 @@ body {
   object-fit: cover;
 }
 
-/* Recipe Content Layout */
-.recipe-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: var(--space-xl);
-}
-
 /* Recipe Sections */
 .recipe-section {
   margin-bottom: var(--space-xl);
+  max-width: 640px;
 }
 
 .recipe-section h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-brown);
+  font-weight: 400;
+  color: var(--color-text);
   margin-bottom: var(--space-md);
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
 }
 
-.recipe-section h2::before {
-  content: "📝";
-  font-size: 1.2rem;
-}
-
-.recipe-section h2.ingredients-title::before {
-  content: "🥗";
-}
-
-.recipe-section h2.instructions-title::before {
-  content: "👨‍🍳";
-}
-
-/* Ingredients - Checklist style */
+/* Ingredients */
 .ingredients-list {
   list-style: none;
-  background: var(--color-yellow-light);
-  padding: var(--space-md);
-  border-radius: var(--radius);
 }
 
 .ingredients-list li {
   padding: var(--space-sm) 0;
-  border-bottom: 1px dashed var(--color-cream-dark);
+  border-bottom: 1px solid var(--color-border);
   font-size: 1rem;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-sm);
 }
 
 .ingredients-list li:last-child {
   border-bottom: none;
 }
 
-.ingredients-list li::before {
-  content: "○";
-  color: var(--color-orange);
-  font-weight: bold;
-  flex-shrink: 0;
-}
-
-/* Instructions - Numbered cards */
+/* Instructions */
 .instructions-list {
   list-style: none;
   counter-reset: step;
@@ -459,61 +386,46 @@ body {
 
 .instructions-list li {
   counter-increment: step;
-  padding: var(--space-md);
-  margin-bottom: var(--space-sm);
-  background: var(--color-white);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 8px rgba(61, 44, 30, 0.06);
+  padding: var(--space-md) 0;
+  padding-left: 3.5rem;
   position: relative;
-  padding-left: 4.5rem;
+  border-bottom: 1px solid var(--color-border);
   font-size: 1rem;
   line-height: 1.7;
+}
+
+.instructions-list li:last-child {
+  border-bottom: none;
 }
 
 .instructions-list li::before {
   content: counter(step);
   position: absolute;
-  left: var(--space-md);
-  top: 50%;
-  transform: translateY(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
-  background: var(--color-orange);
-  color: var(--color-white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1rem;
+  left: 0;
+  top: var(--space-md);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-text-light);
 }
 
 /* Notes Section */
 .recipe-notes {
-  background: var(--color-green-light);
-  border-radius: var(--radius);
+  background: var(--color-cream);
   padding: var(--space-lg);
   margin-top: var(--space-xl);
+  max-width: 640px;
 }
 
 .recipe-notes h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--color-green);
+  font-weight: 400;
+  color: var(--color-text);
   margin-bottom: var(--space-sm);
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-}
-
-.recipe-notes h3::before {
-  content: "💡";
 }
 
 .recipe-notes p {
-  color: var(--color-brown);
+  color: var(--color-text-light);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -523,92 +435,88 @@ body {
    ═══════════════════════════════════════════════════════════════ */
 
 #contribute {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-  margin-top: var(--space-xl);
   text-align: center;
-  box-shadow: 0 2px 16px rgba(61, 44, 30, 0.08);
+  padding: var(--space-xxl) var(--space-lg);
+  background: var(--color-white);
+  margin-top: var(--space-xxl);
+  border-top: 1px solid var(--color-border);
 }
 
 #contribute h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: var(--space-sm);
-  color: var(--color-brown);
+  color: var(--color-text);
 }
 
 #contribute > p {
-  color: var(--color-brown-light);
+  color: var(--color-text-light);
   max-width: 450px;
   margin: 0 auto var(--space-md);
   font-size: 1rem;
+  line-height: 1.6;
 }
 
 .example-prompt {
-  background: var(--color-cream);
-  border-radius: var(--radius);
+  background: var(--color-bg);
   padding: var(--space-md) var(--space-lg);
   margin: var(--space-lg) auto;
-  max-width: 500px;
-  border-left: 4px solid var(--color-orange);
+  max-width: 480px;
+  border-left: 2px solid var(--color-text);
 }
 
 .example-prompt p {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.1rem;
-  color: var(--color-brown);
+  color: var(--color-text);
   margin: 0;
 }
 
-#contribute a {
+#contribute a.button {
   display: inline-block;
-  background: var(--color-orange);
+  background: var(--color-black);
   color: var(--color-white);
-  padding: 0.75rem 1.75rem;
-  border-radius: 50px;
+  padding: 0.9rem 2rem;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
-  margin-top: var(--space-sm);
-  transition: all 0.2s ease;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: var(--space-md);
+  transition: opacity 0.2s ease;
 }
 
-#contribute a:hover {
-  background: var(--color-green);
-  transform: translateY(-2px);
+#contribute a.button:hover {
+  opacity: 0.8;
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   Footer
+   Footer - Minimal
    ═══════════════════════════════════════════════════════════════ */
 
 .footer {
   text-align: center;
   padding: var(--space-xl) var(--space-lg);
-  margin-top: var(--space-xl);
-  background: var(--color-brown);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border-top: 1px solid var(--color-border);
 }
 
 .footer p {
-  color: var(--color-cream);
-  font-size: 0.9rem;
+  color: var(--color-text-light);
+  font-size: 0.85rem;
   margin-bottom: var(--space-xs);
-  opacity: 0.9;
 }
 
 .footer a {
-  color: var(--color-yellow);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.2s ease;
 }
 
 .footer a:hover {
-  color: var(--color-white);
+  opacity: 0.6;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -616,10 +524,6 @@ body {
    ═══════════════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-  
   .nav {
     padding: var(--space-sm) var(--space-md);
   }
@@ -630,7 +534,7 @@ body {
   }
   
   .nav-links {
-    gap: var(--space-sm);
+    gap: var(--space-md);
   }
   
   .container {
@@ -639,47 +543,31 @@ body {
   
   .hero {
     padding: var(--space-xl) var(--space-md);
-    border-radius: var(--radius);
-  }
-  
-  .hero::before {
-    font-size: 4rem;
   }
   
   .recipe-grid {
     grid-template-columns: 1fr;
   }
   
-  .recipe-header {
-    border-radius: var(--radius);
-    padding: var(--space-lg) var(--space-md);
-  }
-  
   .recipe-meta {
-    gap: var(--space-sm);
-  }
-  
-  .meta-item {
-    padding: var(--space-xs) var(--space-sm);
+    gap: var(--space-lg);
+    flex-wrap: wrap;
   }
   
   .instructions-list li {
-    padding-left: 4rem;
+    padding-left: 2.5rem;
   }
   
-  .instructions-list li::before {
-    width: 2rem;
-    height: 2rem;
-    font-size: 0.9rem;
+  .quote-section {
+    padding: var(--space-xl) var(--space-md);
+  }
+  
+  .quote-section blockquote {
+    font-size: 1.25rem;
   }
   
   #contribute {
-    padding: var(--space-lg);
-    border-radius: var(--radius);
-  }
-  
-  .footer {
-    border-radius: var(--radius) var(--radius) 0 0;
+    padding: var(--space-xl) var(--space-md);
   }
 }
 
@@ -688,20 +576,11 @@ body {
    ═══════════════════════════════════════════════════════════════ */
 
 @media print {
-  .nav, .footer, .inspiration-banner, #contribute {
+  .nav, .footer, .top-banner, #contribute, .quote-section {
     display: none;
   }
   
   body {
     background: white;
-  }
-  
-  .hero, .recipe-header {
-    background: none;
-    color: black;
-  }
-  
-  .hero h1, .recipe-header h1 {
-    color: black;
   }
 }
