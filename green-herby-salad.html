@@ -18,12 +18,12 @@
     .nav-links a:hover { border-color: var(--black); text-decoration: none; }
     .recipe-header { background: transparent; padding: 3rem var(--space-lg) 1.5rem; border-bottom: 1px solid #111111; text-align: left; }
     .recipe-header h1 { font-family: "Libre Baskerville", Georgia, "Times New Roman", Times, serif; font-size: clamp(3rem, 6vw, 4.25rem); font-weight: 400; text-transform: none; letter-spacing: -0.015em; line-height: 1.04; margin-bottom: 0.5rem; }
-    .recipe-header .author { font-style: normal; font-weight: 600; }
+    .recipe-header .author { font-style: normal; font-weight: 400; }
     .recipe-meta { display: none; }
     /* White content area aligned with header left padding */
     .container { max-width: 1200px; background: transparent; margin-left: var(--space-lg); margin-right: auto; padding: 2rem 0; }
     .recipe-section { max-width: 684px; margin-bottom: 2rem; }
-    .recipe-section h2 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid #111; margin-bottom: 0.85rem; box-shadow: none; display: inline-block; padding-bottom: 0.35rem; }
+    .recipe-section h2 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: none; margin-bottom: 0.85rem; box-shadow: none; display: inline-block; padding-bottom: 0; }
     .ingredients-list { list-style: disc; background: transparent; border: none; padding: 0 0 0 1.25rem; }
     .ingredients-list li { border: none; padding: 0.45rem 0; font-size: 1.08rem; font-weight: 400; line-height: 1.65; }
     .instructions-list { list-style: decimal; counter-reset: none; padding-left: 1.25rem; }
@@ -35,15 +35,34 @@
     .footer { background: transparent; color: inherit; border-top: 1px solid #111111; }
     .footer a { color: inherit; text-decoration: underline; }
     /* Sqirl-style product layout */
-    .product-layout { display: grid; grid-template-columns: 1fr 1fr 0.9fr; gap: 2.5rem; align-items: start; }
-    .product-media { grid-column: 1 / 3; position: sticky; top: 1.25rem; background: transparent; padding: 0; border: none; margin-left: 0; }
+    .product-layout { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: start; }
+    .product-media { display: none; }
     .product-image { width: 100%; height: auto; display: block; border: none; margin: 0; }
-    .product-details { width: 100%; grid-column: 3; }
+    .product-details { width: 100%; grid-column: auto; }
     .divider { border: 0; border-top: 1px solid #111; margin: 1.25rem 0; box-shadow: 0 -3px 0 var(--accent-yellow) inset; }
     /* Bottom quote band */
-    .quote-band { background: var(--accent-yellow); border-top: 1px solid #111; margin-top: 2rem; padding: 5rem var(--space-lg); text-align: center; }
+    .quote-band { background: var(--accent-yellow); border-top: none; margin-top: 2rem; padding: 5rem var(--space-lg); text-align: center; }
     .quote-band blockquote { font-family: "Libre Baskerville", Georgia, "Times New Roman", Times, serif; font-weight: 400; font-size: clamp(38px, 6.5vw, 58px); letter-spacing: -0.01em; max-width: 95%; margin: 0 auto; }
     .quote-band cite { display: block; margin-top: 0.75rem; font-weight: 700; font-style: normal; }
+    /* Motion gallery styles */
+    .hero-gallery { overflow: hidden; background: #fff; height: 100vh; }
+    .hero-gallery .gallery-track { display: flex; gap: 20px; padding: 0 var(--space-lg); height: 100%; align-items: center; animation: salad-scroll 45s linear infinite; }
+    .hero-gallery img { height: 100%; width: auto; flex: 0 0 auto; display: block; object-fit: cover; object-position: center; border: none; background: #fff; }
+    @keyframes salad-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @media (max-width: 900px) {
+      .hero-gallery { height: 80vh; }
+    }
+    /* Alison Roman–style two-column recipe body */
+    .recipe-body { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 2rem; align-items: start; }
+    .recipe-aside { position: sticky; top: 2rem; }
+    .recipe-main { min-width: 0; }
+    @media (max-width: 900px) {
+      .recipe-body { grid-template-columns: 1fr; }
+      .recipe-aside { position: static; }
+    }
     @media (max-width: 900px) {
       .product-layout { grid-template-columns: 1fr; }
       .product-media { position: static; grid-column: auto; }
@@ -69,24 +88,32 @@
     </div>
   </nav>
 
+  <!-- Motion Gallery -->
+  <section class="hero-gallery" aria-label="Recipe images">
+    <div class="gallery-track">
+      <img src="images/Salad-Above.png" alt="Green Herby Salad top view">
+      <img src="images/Salad-Angle.png" alt="Green Herby Salad angle view">
+      <img src="images/Salad-Side" alt="Green Herby Salad side view">
+      <!-- duplicate for seamless loop -->
+      <img src="images/Salad-Above.png" alt="Green Herby Salad top view duplicate" aria-hidden="true">
+      <img src="images/Salad-Angle.png" alt="Green Herby Salad angle view duplicate" aria-hidden="true">
+      <img src="images/Salad-Side" alt="Green Herby Salad side view duplicate" aria-hidden="true">
+    </div>
+  </section>
+
   <!-- Recipe Header -->
   <header class="recipe-header">
     <h1>Green Herby Salad</h1>
-    <p class="author">A recipe by <strong>Alex</strong></p>
+    <p class="author">A recipe by Alex</p>
   </header>
 
   <!-- Main Content -->
   <main class="container">
-    <div class="product-layout">
-      <div class="product-media">
-        <img src="images/Alex-Salad.jpeg" alt="Green Herby Salad" class="product-image">
-      </div>
-      <div class="product-details">
-        <section class="recipe-section" style="margin-top: 0;">
-          <p>I've become known as the “salad lady” among my friends, who often request that I bring a salad to their dinner parties. The magic is really in the herbs, salt, and lemon. Often I'll add a little bit of shallot to the dressing, and let it sit in the lemon to mellow it out. The best part of salad is that there are a ton of options and you can make it to your taste.</p>
-          <p style="margin-top: 0.75rem;">Here's one of my favorite combinations:</p>
-        </section>
-        <hr class="divider">
+    <section class="recipe-section" style="margin-top: 0;">
+      <p>I've become known as the “salad lady” among my friends, who often request that I bring a salad to their dinner parties. The magic is really in the herbs, salt, and lemon. Often I'll add a little bit of shallot to the dressing, and let it sit in the lemon to mellow it out. The best part of salad is that there are a ton of options and you can make it to your taste. Here's one of my favorite combinations:</p>
+    </section>
+    <div class="recipe-body">
+      <aside class="recipe-aside">
         <section class="recipe-section">
           <h2>Ingredients</h2>
           <ul class="ingredients-list">
@@ -99,7 +126,6 @@
             <li>1 Avocado, diced</li>
           </ul>
         </section>
-        <hr class="divider">
         <section class="recipe-section">
           <h2>Dressing</h2>
           <ul class="ingredients-list">
@@ -109,17 +135,15 @@
             <li>Light olive oil</li>
           </ul>
         </section>
-        <hr class="divider">
-        <section class="recipe-section">
-          <h2>Instructions</h2>
-          <ol class="instructions-list">
-            <li>Add everything to a bowl</li>
-            <li>Add dressing and combine right before serving</li>
-          </ol>
-        </section>
-      </div>
+      </aside>
+      <section class="recipe-section recipe-main">
+        <h2>Instructions</h2>
+        <ol class="instructions-list">
+          <li>Add everything to a bowl</li>
+          <li>Add dressing and combine right before serving</li>
+        </ol>
+      </section>
     </div>
-
   </main>
 
   <section class="quote-band">
