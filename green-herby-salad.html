@@ -45,15 +45,15 @@
     .quote-band blockquote { font-family: "Libre Baskerville", Georgia, "Times New Roman", Times, serif; font-weight: 400; font-size: clamp(38px, 6.5vw, 58px); letter-spacing: -0.01em; max-width: 95%; margin: 0 auto; }
     .quote-band cite { display: block; margin-top: 0.75rem; font-weight: 700; font-style: normal; }
     /* Motion gallery styles */
-    .hero-gallery { overflow: hidden; background: #fff; height: 100vh; }
-    .hero-gallery .gallery-track { display: flex; gap: 0; padding: 0; height: 100%; align-items: center; animation: salad-scroll 45s linear infinite; }
-    .hero-gallery img { height: 100%; width: auto; flex: 0 0 auto; display: block; object-fit: cover; object-position: center; border: none; background: #fff; }
+    .hero-gallery { overflow: hidden; background: #fff; height: 65vh; }
+    .hero-gallery .gallery-track { display: flex; gap: 0; padding: 0; height: 100%; align-items: center; animation: salad-scroll 30s linear infinite; will-change: transform; }
+    .hero-gallery img { height: 100%; width: auto; flex: 0 0 auto; display: block; object-fit: contain; object-position: center; border: none; background: #fff; }
     @keyframes salad-scroll {
       from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+      to { transform: translateX(var(--marquee-shift, -50%)); }
     }
     @media (max-width: 900px) {
-      .hero-gallery { height: 80vh; }
+      .hero-gallery { height: 60vh; }
     }
     /* Alison Roman–style two-column recipe body */
     .recipe-body { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 2rem; align-items: start; }
@@ -93,13 +93,43 @@
     <div class="gallery-track">
       <img src="images/Salad-Above.png" alt="Green Herby Salad top view">
       <img src="images/Salad-Angle.png" alt="Green Herby Salad angle view">
-      <img src="images/Salad-Side.png" alt="Green Herby Salad side view">
+      <img src="images/Salad-Side-Wide.png" alt="Green Herby Salad side view">
       <!-- duplicate for seamless loop -->
       <img src="images/Salad-Above.png" alt="Green Herby Salad top view duplicate" aria-hidden="true">
       <img src="images/Salad-Angle.png" alt="Green Herby Salad angle view duplicate" aria-hidden="true">
-      <img src="images/Salad-Side.png" alt="Green Herby Salad side view duplicate" aria-hidden="true">
+      <img src="images/Salad-Side-Wide.png" alt="Green Herby Salad side view duplicate" aria-hidden="true">
     </div>
   </section>
+  <script>
+    // Ensure the marquee scroll is truly seamless by shifting exactly the width of the first sequence
+    (function () {
+      const track = document.querySelector('.hero-gallery .gallery-track');
+      if (!track) return;
+      const imgs = Array.from(track.querySelectorAll('img'));
+      if (imgs.length < 2) return;
+      const half = Math.floor(imgs.length / 2);
+      function setShift() {
+        let w = 0;
+        for (let i = 0; i < half; i++) {
+          w += imgs[i].getBoundingClientRect().width;
+        }
+        track.style.setProperty('--marquee-shift', `-${Math.ceil(w)}px`);
+      }
+      let pending = imgs.length;
+      imgs.forEach(img => {
+        if (img.complete) {
+          if (--pending === 0) setShift();
+        } else {
+          img.addEventListener('load', () => {
+            if (--pending === 0) setShift();
+          }, { once: true });
+        }
+      });
+      // Fallback in case images are cached or load events coalesce
+      window.addEventListener('load', setShift);
+      window.addEventListener('resize', setShift);
+    })();
+  </script>
 
   <!-- Recipe Header -->
   <header class="recipe-header">
