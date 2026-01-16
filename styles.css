@@ -349,14 +349,15 @@ a {
   align-items: center;
   justify-content: center;
   background: var(--white);
+  min-height: 400px;
 }
 
 .recipe-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center center;
 }
 
 /* Ingredients + Photo Row */
