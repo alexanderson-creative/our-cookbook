@@ -345,12 +345,18 @@ a {
 .recipe-image-container {
   border: 3px solid var(--black);
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
 }
 
 .recipe-image {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: contain;
+  object-position: center;
 }
 
 /* Ingredients + Photo Row */
