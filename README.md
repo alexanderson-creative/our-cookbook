@@ -2,7 +2,7 @@
 
 A collaborative digital cookbook by the Retail Brand Team. Built with Cursor AI, hosted free on GitHub Pages.
 
-**🌐 Live Site:** [alexanderson-creative.github.io/our-cookbook](https://alexanderson-creative-shopify.github.io/our-cookbook/)
+**🌐 Live Site:** [alexanderson-creative.github.io/our-cookbook](https://alexanderson-creative.github.io/our-cookbook/)
 
 ---
 
