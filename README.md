@@ -2,7 +2,7 @@
 
 A collaborative digital cookbook by the Retail Brand Team. Built with Cursor AI, hosted free on GitHub Pages.
 
-**🌐 Live Site:** [brianokarski-shopify.github.io/our-cookbook](https://brianokarski-shopify.github.io/our-cookbook/)
+**🌐 Live Site:** [alexanderson-creative.github.io/our-cookbook](https://alexanderson-creative-shopify.github.io/our-cookbook/)
 
 ---
 
@@ -25,7 +25,7 @@ If you don't have it yet, download Cursor at [cursor.com](https://cursor.com) or
 1. Open Cursor
 2. Press `Cmd + Shift + P` (Mac) or `Ctrl + Shift + P` (Windows)
 3. Type **"Git: Clone"** → hit Enter
-4. Paste this URL: `https://github.com/brianokarski-shopify/our-cookbook.git`
+4. Paste this URL: `https://github.com/alexanderson-creative/our-cookbook.git`
 5. Pick a folder to save it (Desktop works great)
 6. Click **Open** when it asks
 
