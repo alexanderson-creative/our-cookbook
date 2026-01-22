@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crispy Orecchiette With Spicy Sausage and Collard Ragù | Our Cookbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Public+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ivory: #FCE8E2;
+            --warm-white: #FFFFFF;
+            --charcoal: #12070A;
+            --stone: #5A4A4D;
+            --terracotta: #26171B;
+            --sage: #8B9A7D;
+            --line: rgba(18, 7, 10, 0.15);
+
+            --sans: 'Public Sans', -apple-system, sans-serif;
+            --body: 'EB Garamond', Georgia, serif;
+
+            /* Spacing system */
+            --page-margin: calc((100vw - 1100px) / 8 + 2rem);
+            --content-padding: 2rem;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background: var(--ivory);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Top Banner */
+        .top-banner {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #FF5C00;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 0.75rem var(--content-padding);
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .top-banner a {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        /* Navigation */
+        .nav {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #FFF8F0;
+            padding: 1.5rem var(--content-padding);
+            border-bottom: 3px solid #0A0A0A;
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--sans);
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #0A0A0A;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--sans);
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            padding: 0.5rem 1rem;
+            border: 2px solid transparent;
+            transition: all 0.15s ease;
+            color: #0A0A0A;
+        }
+
+        .nav-links a:hover {
+            border-color: #0A0A0A;
+        }
+
+        /* Hero Split Layout */
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 70vh;
+            margin-bottom: 5rem;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem var(--content-padding) 3rem;
+            padding-left: var(--page-margin);
+        }
+
+        .hero-text {
+            max-width: 450px;
+        }
+
+        .hero-text h1 {
+            font-family: var(--sans);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.015em;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-family: var(--sans);
+            font-size: 1rem;
+            font-style: normal;
+            color: var(--stone);
+            margin: 0 0 2rem;
+            line-height: 1.5;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: flex-start;
+            gap: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px dotted var(--line);
+        }
+
+        .meta-item {
+            text-align: left;
+        }
+
+        .meta-label {
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--stone);
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .meta-value {
+            font-family: var(--sans);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .hero-image {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-credit {
+            font-size: 0.75rem;
+            color: var(--stone);
+            text-align: right;
+            margin-top: 0.75rem;
+            font-style: normal;
+        }
+
+        /* Intro */
+        .intro {
+            max-width: 1000px;
+            margin: 0 auto 5rem;
+            padding: 0 2rem;
+        }
+
+        .intro p {
+            font-family: var(--sans);
+            font-size: 1.2rem;
+            line-height: 1.75;
+            color: var(--charcoal);
+        }
+
+        .intro p+p {
+            margin-top: 1.25rem;
+        }
+
+        /* Main Content Grid */
+        .recipe-content {
+            max-width: 1100px;
+            margin-left: var(--page-margin);
+            margin-right: auto;
+            padding: 0 0 6rem;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 5rem;
+        }
+
+        /* Ingredients */
+        .ingredients {
+            position: sticky;
+            top: 7rem;
+            align-self: start;
+        }
+
+        .section-title {
+            font-family: var(--sans);
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dotted var(--line);
+        }
+
+        .ingredients-list {
+            list-style: none;
+        }
+
+        .ingredients-list li {
+            padding: 0.85rem 0;
+            border-bottom: 1px dotted var(--line);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+
+        .ingredient-category {
+            font-size: 0.75rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--stone);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ingredient-category:first-of-type {
+            margin-top: 0;
+        }
+
+        .ingredient-amount {
+            font-weight: 400;
+            color: var(--charcoal);
+        }
+
+        .ingredient-item {
+            color: var(--stone);
+        }
+
+        /* Instructions */
+        .instructions-list {
+            list-style: none;
+            counter-reset: step;
+        }
+
+        .instructions-list li {
+            counter-increment: step;
+            padding: 2rem 0;
+            border-bottom: 1px dotted var(--line);
+            display: grid;
+            grid-template-columns: 1.5rem 1fr;
+            gap: 0.96rem;
+            align-items: start;
+        }
+
+        .instructions-list li:first-child {
+            padding-top: 0;
+        }
+
+        .instructions-list li:last-child {
+            border-bottom: none;
+        }
+
+        .instructions-list li::before {
+            content: counter(step);
+            font-family: var(--sans);
+            font-size: 1rem;
+            font-weight: 400;
+            color: #351F24;
+            line-height: 1.7;
+        }
+
+        .step-content {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .step-content strong {
+            font-family: var(--sans);
+            font-weight: 400;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* Notes */
+        .recipe-notes {
+            background: #281318;
+            max-width: none;
+            margin: 0;
+            padding: 4rem var(--content-padding) 6rem;
+        }
+
+        .recipe-notes-grid {
+            max-width: 1100px;
+            margin-left: var(--page-margin);
+            margin-right: auto;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 5rem;
+            align-items: stretch;
+        }
+
+        .notes-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100%;
+        }
+
+        .recipe-notes .section-title {
+            font-family: var(--sans);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 400;
+            color: #FFFFFF;
+            letter-spacing: -0.015em;
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 2rem;
+            text-transform: none;
+        }
+
+        .recipe-notes p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #FFFFFF;
+            margin-bottom: 0.75rem;
+        }
+
+        .notes-footer {
+            max-width: 1100px;
+            margin-left: var(--page-margin);
+            margin-right: auto;
+            margin-top: 3rem;
+        }
+
+        .notes-branding {
+            font-family: var(--sans);
+            font-size: 1rem;
+            font-weight: 400;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .notes-branding:hover {
+            opacity: 0.8;
+        }
+
+        .notes-subheading {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #281318;
+            color: #f3f3f3;
+            padding: 3rem var(--content-padding);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin-left: var(--page-margin);
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer a {
+            color: #f3f3f3;
+            opacity: 0.7;
+            font-size: 0.85rem;
+            transition: opacity 0.2s;
+        }
+
+        .footer a:hover {
+            opacity: 1;
+        }
+
+        .footer-logo {
+            font-family: var(--sans);
+            font-size: 1.1rem;
+            font-weight: 400;
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            :root {
+                --page-margin: 2rem;
+                --content-padding: 2rem;
+            }
+
+            .hero-content {
+                padding-left: var(--page-margin);
+            }
+
+            .recipe-content,
+            .recipe-notes-grid,
+            .notes-footer,
+            .footer-content {
+                margin-left: var(--page-margin);
+                margin-right: var(--page-margin);
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+            :root {
+                --page-margin: 1.5rem;
+                --content-padding: 1.5rem;
+            }
+
+            .hero-split {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                margin-bottom: 3rem;
+            }
+
+            .hero-content {
+                padding: 2rem var(--page-margin);
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+                aspect-ratio: 16 / 10;
+            }
+
+            .recipe-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                margin-left: var(--page-margin);
+                margin-right: var(--page-margin);
+            }
+
+            .recipe-notes {
+                padding-left: var(--page-margin);
+                padding-right: var(--page-margin);
+            }
+
+            .recipe-notes-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .notes-footer {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .footer-content {
+                margin-left: var(--page-margin);
+                margin-right: var(--page-margin);
+            }
+
+            .ingredients {
+                position: static;
+            }
+
+            .hero-meta {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --page-margin: 1.5rem;
+                --content-padding: 1.5rem;
+            }
+
+            .hero-content {
+                padding: var(--page-margin);
+            }
+
+            .hero-text h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero-meta {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .recipe-content {
+                margin-left: var(--page-margin);
+                margin-right: var(--page-margin);
+                padding-left: 0;
+                padding-right: 0;
+                padding-bottom: 4rem;
+            }
+
+            .nav {
+                padding: 1rem var(--page-margin);
+            }
+
+            .nav-content {
+                padding: 0;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .recipe-notes {
+                padding: 3rem var(--page-margin) 4rem;
+            }
+
+            .recipe-notes-grid {
+                margin-left: 0;
+                margin-right: 0;
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-content {
+                margin-left: var(--page-margin);
+                margin-right: var(--page-margin);
+            }
+
+            .notes-footer {
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .hero-meta {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+
+            .instructions-list li {
+                grid-template-columns: 2.5rem 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Site inspired by <a href="https://potluckmarket.com">potluckmarket.com</a> — Ask Cursor to redesign this like
+        your favorite food site 👀
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">Our Cookbook</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Recipes</a></li>
+                <li><a href="index.html#contribute">Add Yours</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-split">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Crispy Orecchiette with Spicy Sausage & Collard Ragù</h1>
+                <p class="hero-subtitle">Caroline's favourite recipe to make and share with friends.</p>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Prep Time</span>
+                        <span class="meta-value">20 min</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Cook Time</span>
+                        <span class="meta-value">45 min</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Serves</span>
+                        <span class="meta-value">4 friends</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/caroline-pasta.png" alt="Crispy Orecchiette with Spicy Sausage and Collard Ragù">
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="recipe-content">
+
+        <!-- Ingredients -->
+        <aside class="ingredients">
+            <h2 class="section-title">Ingredients</h2>
+            <ul class="ingredients-list">
+                <li><span class="ingredient-amount">3 large</span> <span class="ingredient-item">shallots (about 6
+                        oz)</span></li>
+                <li><span class="ingredient-amount">1 bunch</span> <span class="ingredient-item">collard greens (about 8
+                        oz)</span></li>
+                <li><span class="ingredient-amount">2 oz</span> <span class="ingredient-item">grated Parmigiano Reggiano
+                        (about ½ cup), plus more for serving</span></li>
+                <li><span class="ingredient-amount">5 oz</span> <span class="ingredient-item">burrata cheese
+                        (optional)</span></li>
+                <li><span class="ingredient-amount">1 lb</span> <span class="ingredient-item">sweet Italian sausage,
+                        casings removed</span></li>
+                <li><span class="ingredient-amount"></span> <span class="ingredient-item">Kosher salt</span></li>
+                <li><span class="ingredient-amount">8 oz</span> <span class="ingredient-item">orecchiette</span></li>
+                <li><span class="ingredient-amount">6 Tbsp</span> <span class="ingredient-item">extra-virgin olive oil,
+                        plus more for drizzling</span></li>
+                <li><span class="ingredient-amount">¼ cup</span> <span class="ingredient-item">tomato paste</span></li>
+                <li><span class="ingredient-amount">3–4 Tbsp</span> <span class="ingredient-item">chopped jarred
+                        Calabrian chiles</span></li>
+            </ul>
+        </aside>
+
+        <!-- Instructions -->
+        <section class="instructions">
+            <h2 class="section-title">Method</h2>
+            <ol class="instructions-list">
+                <li>
+                    <div class="step-content">
+                        <strong>Do some prep</strong>
+                        Bring a large pot of heavily salted water to a boil (use a big handful of salt). Thinly slice
+                        the shallots. Strip the leaves off the collard greens; discard stems. Slice leaves crosswise
+                        into 1-inch-wide strips.
+                    </div>
+                </li>
+                <li>
+                    <div class="step-content">
+                        <strong>Cook the pasta</strong>
+                        Add the orecchiette to the boiling water, stir, and cook until al dente per package directions.
+                        Before draining, scoop out a few cups of pasta water (you'll need a good amount). Drain pasta
+                        and drizzle lightly with olive oil so it doesn't clump.
+                    </div>
+                </li>
+                <li>
+                    <div class="step-content">
+                        <strong>Meanwhile, start the ragù</strong>
+                        In a large Dutch oven, heat several tablespoons olive oil over medium-high. When very hot, add
+                        the sausage, breaking it into large golf-ball-size chunks. Cook undisturbed until well browned,
+                        3–4 minutes. Flip with tongs and brown the other side, 1–2 minutes. Transfer to a plate.<br><br>
+                        <em>Note: The sausage will still be slightly undercooked—this is fine; it finishes
+                            later.</em><br><br>
+                        Lower heat to medium-low. Add shallots and a big pinch of salt; cook, stirring often, until
+                        jammy and cooked down, about 4 minutes.<br><br>
+                        Stir in tomato paste and 4 Tbsp Calabrian chiles (use less if you want it milder). Cook,
+                        stirring, until the tomato paste starts to stick to the pot, 4–5 minutes.<br><br>
+                        Add collard greens plus a few big splashes of reserved pasta water. Stir, cover, and cook until
+                        greens are tender, 4–5 minutes, adding more pasta water if it gets dry. Ragù should be saucy.
+                        Remove from heat and keep covered.
+                    </div>
+                </li>
+                <li>
+                    <div class="step-content">
+                        <strong>Crisp the pasta</strong>
+                        Heat 2 Tbsp olive oil in a large nonstick skillet over medium-high. Add about half the cooked
+                        pasta and cook undisturbed until the bottom is golden brown and crisp at the edges, 3–4 minutes.
+                        Add to the pot of ragù and repeat with the remaining pasta.
+                    </div>
+                </li>
+                <li>
+                    <div class="step-content">
+                        <strong>Finish</strong>
+                        Return the pot to medium heat. Add sausage back in, breaking into smaller pieces. Add a big
+                        splash of reserved pasta water and a few big handfuls of grated Parm. Cook, stirring vigorously,
+                        until a thick sauce coats the pasta, about 30 seconds.<br><br>
+                        Squeeze in the juice of 1 lemon; stir.<br><br>
+                        Serve in bowls. Tear burrata (if using) over top, drizzle with more olive oil, sprinkle with
+                        more Parm, and serve.
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Notes -->
+    <section class="recipe-notes">
+        <div class="recipe-notes-grid">
+            <div class="notes-left">
+                <h2 class="section-title">Happy cooking</h2>
+            </div>
+            <div class="notes-right">
+                <p>I'd give you my own recipe for stuff but I don't measure anything. This one's originally by Molly
+                    Baz.</p>
+                <p>Also, if you don't want burrata this is also fine without it. If you're lazy to crisp the
+                    orecchiette, that's okay too. It'll taste good without.</p>
+            </div>
+        </div>
+        <div class="notes-footer">
+            <a href="index.html" class="notes-branding">← Back to recipes</a>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
